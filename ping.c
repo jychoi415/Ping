@@ -92,16 +92,7 @@ int main(int argc, char* argv[])
       }
 
       ++sended;   // packet num
-/*
-      struct timeval timeout;
-      fd_set readfds;
 
-      FD_ZERO(&readfds);
-      FD_SET(sockfd,&readfds);
-      timeout.tv_sec = 1;
-      timeout.tv_usec = 500;
-      select(1,&readfds,NULL,NULL,&timeout);
-*/
       buffer = (char*)malloc(packet_size);
       memset(buffer,0,sizeof(packet_size));
 
